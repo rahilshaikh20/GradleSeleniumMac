@@ -3,7 +3,7 @@
 <suite name="Suite Demo">
     <test thread-count="5" name="Suite Name">
         <classes>
-            <class name="testCase_3"/>
+            <class name="testCase_6"/>
             <class name="testCase_4"/>
             <class name="testCase_5"/>
         </classes>
