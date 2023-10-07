@@ -5,7 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -14,7 +14,7 @@ import org.testng.annotations.*;
 import java.io.IOException;
 
 public class ExtentReportSetUp {
-    public static ExtentHtmlReporter htmlReporter;
+    public static ExtentSparkReporter htmlReporter;
     public static ExtentReports extent;
     public static ExtentTest test;
 
@@ -22,7 +22,7 @@ public class ExtentReportSetUp {
     public void setUp()
     {
         //htmlReporter = new ExtentHtmlReporter("/Users/rahilshaikh/Downloads/Spark_Report.html");
-       htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/SparkReports/Rahil_Report.html");
+       htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") +"/SparkReports/Rahil_Report.html");
 
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
