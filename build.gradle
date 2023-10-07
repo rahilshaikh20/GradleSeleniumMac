@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.12.1'
+    implementation 'com.aventstack:extentreports:3.1.5'
+    implementation 'org.testng:testng:7.1.0'
+    implementation group: 'org.testng', name: 'testng', version: '7.7.1'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
+}
+
+test {
+    useTestNG()
+            {
+                //useDefaultListeners()
+                suites 'src/test/resources/testNG.xml'
+            }
+
+}
