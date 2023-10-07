@@ -22,14 +22,14 @@ public class ExtentReportSetUp {
     public void setUp()
     {
         //htmlReporter = new ExtentHtmlReporter("/Users/rahilshaikh/Downloads/Spark_Report.html");
-       htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") +"/SparkReports/Rahil_Report.html");
-
+        htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") +"/SparkReports/Rahil_Report.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
 
         htmlReporter.config().setDocumentTitle("Demo Gradle Report");
         htmlReporter.config().setReportName("My Own Report");
         htmlReporter.config().setTheme(Theme.DARK);
+        htmlReporter.config().setTimelineEnabled(true);
     }
     @AfterMethod
     public void getResult(ITestResult result)  {
@@ -54,7 +54,7 @@ public class ExtentReportSetUp {
     }
 
     @AfterSuite
-    public void tearDown()
+    public void ExtentTearDown()
     {
         extent.flush();
         System.out.println("Report Flushed ...!!!");

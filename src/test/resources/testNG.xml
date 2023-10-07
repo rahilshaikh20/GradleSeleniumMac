@@ -7,6 +7,7 @@
             <class name="testCase_4"/>
             <class name="testCase_5"/>
             <class name="testCase_7"/>
+            <class name="testCase_3"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

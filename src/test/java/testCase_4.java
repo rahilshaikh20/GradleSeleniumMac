@@ -11,7 +11,7 @@ public class testCase_4 extends ExtentReportSetUp
  {
      test=extent.createTest("TC_0004");
      test.info("4th TC started");
-     test.fail("Test case passed");
+     test.pass("Test case passed");
      System.out.println("*****TC Passed****");
 
  }
